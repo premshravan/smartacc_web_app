@@ -24,7 +24,7 @@
   --bg-surface: linear-gradient(180deg, #F8FBFE 0%, #EEF7FD 100%);
   --bg-slate-subtle: linear-gradient(180deg, #EDF6FC 0%, #E2EFF9 100%);
   --bg-blue-subtle: linear-gradient(135deg, #E6F4FC 0%, #D8ECF9 100%);
-  --bg-card: linear-gradient(150deg, #FFFFFF 0%, #F3F9FE 55%, #E6F3FB 100%);
+  --bg-card: linear-gradient(145deg, #E2F1FC 0%, #EEF7FD 50%, #D8EDFA 100%);
 
   --border-color: #D6E8F7;
   --border-light: #E4F1FA;
@@ -2171,25 +2171,26 @@ img, svg {
   align-items: center;
   gap: 1rem;
   padding: 1.25rem;
-  background: linear-gradient(145deg, #FFFFFF 0%, #F1F8FE 60%, #E6F3FB 100%);
-  border: 1px solid rgba(18, 172, 204, 0.22);
+  background: linear-gradient(145deg, #E2F1FC 0%, #EEF7FD 50%, #D8EDFA 100%);
+  border: 1px solid rgba(18, 172, 204, 0.32);
   border-radius: var(--radius-lg);
-  box-shadow: 0 4px 16px rgba(18, 140, 201, 0.07);
+  box-shadow: 0 4px 18px rgba(18, 140, 201, 0.08);
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .audience-card:hover {
   transform: translateY(-3px);
-  border-color: rgba(18, 172, 204, 0.5);
-  box-shadow: 0 10px 24px rgba(18, 140, 201, 0.16);
+  background: linear-gradient(145deg, #D9EBF9 0%, #E7F3FC 50%, #CCE5F8 100%);
+  border-color: rgba(18, 172, 204, 0.55);
+  box-shadow: 0 12px 28px rgba(18, 140, 201, 0.16);
 }
 
 .audience-icon-wrap {
   width: 48px;
   height: 48px;
   border-radius: var(--radius-md);
-  background: linear-gradient(135deg, #EFF8FE 0%, #E0F2FE 100%);
-  border: 1px solid rgba(18, 172, 204, 0.28);
+  background: linear-gradient(135deg, #DCEEFA 0%, #CCE4F8 100%);
+  border: 1px solid rgba(18, 172, 204, 0.3);
   color: var(--brand-primary);
   display: flex;
   align-items: center;
@@ -2231,12 +2232,13 @@ img, svg {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  background-color: var(--bg-slate-subtle);
-  border: 1px dashed #CBD5E1;
+  background: linear-gradient(145deg, #E0F0FB 0%, #ECF6FD 50%, #D5E9F8 100%);
+  border: 1px dashed rgba(18, 172, 204, 0.4);
   border-radius: var(--radius-lg);
   padding: 1.25rem 1.5rem;
   margin-top: 1.5rem;
   align-items: flex-start;
+  box-shadow: 0 4px 16px rgba(18, 140, 201, 0.06);
 }
 
 @media (min-width: 768px) {
@@ -2286,11 +2288,11 @@ img, svg {
 }
 
 .challenge-card {
-  background: linear-gradient(150deg, #FFFFFF 0%, #F5FAFD 50%, #EEF7FD 100%);
-  border: 1px solid rgba(18, 172, 204, 0.22);
+  background: linear-gradient(145deg, #E2F1FC 0%, #EEF7FD 50%, #D8EDFA 100%);
+  border: 1px solid rgba(18, 172, 204, 0.32);
   border-radius: var(--radius-lg);
   padding: 2rem;
-  box-shadow: 0 4px 16px rgba(18, 140, 201, 0.06);
+  box-shadow: 0 4px 18px rgba(18, 140, 201, 0.08);
   transition: all 0.25s ease;
   position: relative;
   overflow: hidden;
@@ -2298,15 +2300,17 @@ img, svg {
 
 .challenge-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 28px rgba(18, 140, 201, 0.14);
-  border-color: rgba(18, 194, 207, 0.5);
+  background: linear-gradient(145deg, #D9EBF9 0%, #E7F3FC 50%, #CCE5F8 100%);
+  box-shadow: 0 12px 30px rgba(18, 140, 201, 0.16);
+  border-color: rgba(18, 194, 207, 0.55);
 }
 
 .challenge-icon-box {
   width: 48px;
   height: 48px;
   border-radius: var(--radius-md);
-  background-color: var(--bg-slate-subtle);
+  background: linear-gradient(135deg, #DCEEFA 0%, #CDE5F8 100%);
+  border: 1px solid rgba(18, 172, 204, 0.3);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2349,11 +2353,11 @@ img, svg {
 }
 
 .feature-card {
-  background: linear-gradient(150deg, #FFFFFF 0%, #F2F9FD 55%, #E5F3FC 100%);
-  border: 1px solid rgba(18, 172, 204, 0.22);
+  background: linear-gradient(145deg, #E2F1FC 0%, #EEF7FD 50%, #D8EDFA 100%);
+  border: 1px solid rgba(18, 172, 204, 0.32);
   border-radius: var(--radius-lg);
   padding: 1.75rem;
-  box-shadow: 0 4px 18px rgba(18, 140, 201, 0.07);
+  box-shadow: 0 4px 18px rgba(18, 140, 201, 0.08);
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
   overflow: hidden;
@@ -2433,12 +2437,12 @@ img, svg {
 }
 
 .solution-card {
-  background: linear-gradient(150deg, #FFFFFF 0%, #F2F9FD 55%, #E5F3FC 100%);
-  border: 1px solid rgba(18, 172, 204, 0.22);
+  background: linear-gradient(145deg, #E2F1FC 0%, #EEF7FD 50%, #D8EDFA 100%);
+  border: 1px solid rgba(18, 172, 204, 0.32);
   border-radius: var(--radius-lg);
   display: flex;
   flex-direction: column;
-  box-shadow: 0 4px 18px rgba(18, 140, 201, 0.07);
+  box-shadow: 0 4px 18px rgba(18, 140, 201, 0.08);
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
   overflow: hidden;
@@ -2502,8 +2506,8 @@ img, svg {
 
 .solution-card-foot {
   padding: 1rem 1.75rem;
-  border-top: 1px solid rgba(18, 172, 204, 0.18);
-  background: linear-gradient(180deg, #F0F8FD 0%, #E8F4FC 100%);
+  border-top: 1px solid rgba(18, 172, 204, 0.22);
+  background: linear-gradient(180deg, #E5F3FC 0%, #D8ECF9 100%);
   border-bottom-left-radius: var(--radius-lg);
   border-bottom-right-radius: var(--radius-lg);
 }
@@ -2528,11 +2532,11 @@ img, svg {
    ========================================================================== */
 
 .preview-callout-card {
-  background: linear-gradient(150deg, #FFFFFF 0%, #F5FAFD 50%, #EEF7FD 100%);
-  border: 1px solid rgba(18, 172, 204, 0.25);
+  background: linear-gradient(145deg, #DFEFFB 0%, #EBF5FD 50%, #D4E9F8 100%);
+  border: 1px solid rgba(18, 172, 204, 0.35);
   border-radius: var(--radius-xl);
   padding: 2.5rem;
-  box-shadow: 0 10px 30px rgba(18, 140, 201, 0.1);
+  box-shadow: 0 10px 30px rgba(18, 140, 201, 0.12);
   position: relative;
 }
 
@@ -2632,19 +2636,20 @@ img, svg {
 }
 
 .journey-step-card {
-  background: linear-gradient(150deg, #FFFFFF 0%, #F5FAFD 50%, #EEF7FD 100%);
-  border: 1px solid rgba(18, 172, 204, 0.22);
+  background: linear-gradient(145deg, #E2F1FC 0%, #EEF7FD 50%, #D8EDFA 100%);
+  border: 1px solid rgba(18, 172, 204, 0.32);
   border-radius: var(--radius-lg);
   padding: 2rem;
   position: relative;
-  box-shadow: 0 4px 16px rgba(18, 140, 201, 0.06);
+  box-shadow: 0 4px 18px rgba(18, 140, 201, 0.08);
   transition: all 0.25s ease;
 }
 
 .journey-step-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 28px rgba(18, 140, 201, 0.14);
-  border-color: rgba(18, 194, 207, 0.5);
+  background: linear-gradient(145deg, #D9EBF9 0%, #E7F3FC 50%, #CCE5F8 100%);
+  box-shadow: 0 12px 30px rgba(18, 140, 201, 0.16);
+  border-color: rgba(18, 194, 207, 0.55);
 }
 
 .step-number-badge {
@@ -2692,26 +2697,27 @@ img, svg {
 }
 
 .why-card {
-  background: linear-gradient(150deg, #FFFFFF 0%, #F5FAFD 50%, #EEF7FD 100%);
-  border: 1px solid rgba(18, 172, 204, 0.22);
+  background: linear-gradient(145deg, #E2F1FC 0%, #EEF7FD 50%, #D8EDFA 100%);
+  border: 1px solid rgba(18, 172, 204, 0.32);
   border-radius: var(--radius-lg);
   padding: 2rem;
-  box-shadow: 0 4px 16px rgba(18, 140, 201, 0.06);
+  box-shadow: 0 4px 18px rgba(18, 140, 201, 0.08);
   transition: all 0.25s ease;
 }
 
 .why-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 28px rgba(18, 140, 201, 0.14);
-  border-color: rgba(18, 194, 207, 0.5);
+  background: linear-gradient(145deg, #D9EBF9 0%, #E7F3FC 50%, #CCE5F8 100%);
+  box-shadow: 0 12px 30px rgba(18, 140, 201, 0.16);
+  border-color: rgba(18, 194, 207, 0.55);
 }
 
 .why-icon-wrap {
   width: 52px;
   height: 52px;
   border-radius: var(--radius-md);
-  background: linear-gradient(135deg, #EFF8FE 0%, #E2EFF9 100%);
-  border: 1px solid rgba(18, 172, 204, 0.2);
+  background: linear-gradient(135deg, #DCEEFA 0%, #CDE5F8 100%);
+  border: 1px solid rgba(18, 172, 204, 0.3);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2742,11 +2748,11 @@ img, svg {
 }
 
 .faq-item {
-  background: linear-gradient(150deg, #FFFFFF 0%, #F3F9FE 60%, #E6F3FB 100%);
-  border: 1px solid rgba(18, 172, 204, 0.22);
+  background: linear-gradient(145deg, #E4F2FC 0%, #EEF7FD 50%, #D9EEFA 100%);
+  border: 1px solid rgba(18, 172, 204, 0.3);
   border-radius: var(--radius-md);
   overflow: hidden;
-  box-shadow: 0 2px 10px rgba(18, 140, 201, 0.05);
+  box-shadow: 0 3px 12px rgba(18, 140, 201, 0.06);
   transition: all 0.2s ease;
 }
 
@@ -2778,8 +2784,8 @@ img, svg {
 
 .faq-answer-panel {
   display: none;
-  border-top: 1px solid rgba(18, 172, 204, 0.18);
-  background: linear-gradient(180deg, #F0F8FE 0%, #E7F4FC 100%);
+  border-top: 1px solid rgba(18, 172, 204, 0.22);
+  background: linear-gradient(180deg, #E6F4FC 0%, #DCF0FA 100%);
 }
 
 .faq-answer-panel.panel-open {
@@ -3251,11 +3257,11 @@ img, svg {
    ========================================================================== */
 
 .form-wrapper-card {
-  background: linear-gradient(160deg, #FFFFFF 0%, #F5FAFD 50%, #EEF7FD 100%);
-  border: 1px solid rgba(18, 172, 204, 0.22);
+  background: linear-gradient(145deg, #E0F0FB 0%, #ECF6FD 50%, #D4E9F8 100%);
+  border: 1px solid rgba(18, 172, 204, 0.35);
   border-radius: var(--radius-xl);
   padding: 2.25rem;
-  box-shadow: 0 10px 35px rgba(18, 140, 201, 0.1);
+  box-shadow: 0 10px 35px rgba(18, 140, 201, 0.12);
   position: relative;
   overflow: hidden;
 }
@@ -3527,13 +3533,13 @@ img, svg {
 }
 
 .feature-detail-card {
-  background: linear-gradient(150deg, #FFFFFF 0%, #F2F9FD 55%, #E5F3FC 100%);
-  border: 1px solid rgba(18, 172, 204, 0.22);
+  background: linear-gradient(145deg, #E2F1FC 0%, #EEF7FD 50%, #D8EDFA 100%);
+  border: 1px solid rgba(18, 172, 204, 0.32);
   border-radius: var(--radius-lg);
   padding: 1.75rem;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 4px 18px rgba(18, 140, 201, 0.07);
+  box-shadow: 0 4px 18px rgba(18, 140, 201, 0.08);
   position: relative;
   overflow: hidden;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
@@ -3625,11 +3631,11 @@ img, svg {
 }
 
 .workflow-explainer-card {
-  background: linear-gradient(150deg, #FFFFFF 0%, #F5FAFD 50%, #EEF7FD 100%);
-  border: 1px solid rgba(18, 172, 204, 0.22);
+  background: linear-gradient(145deg, #E0F0FB 0%, #ECF6FD 50%, #D4E9F8 100%);
+  border: 1px solid rgba(18, 172, 204, 0.35);
   border-radius: var(--radius-xl);
   padding: 2.5rem;
-  box-shadow: 0 8px 30px rgba(18, 140, 201, 0.08);
+  box-shadow: 0 8px 30px rgba(18, 140, 201, 0.1);
 }
 
 .workflow-explainer-grid {
@@ -3681,11 +3687,11 @@ img, svg {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  background: linear-gradient(150deg, #FFFFFF 0%, #F5FAFD 50%, #EEF7FD 100%);
-  border: 1px solid rgba(18, 172, 204, 0.22);
+  background: linear-gradient(145deg, #E0F0FB 0%, #ECF6FD 50%, #D4E9F8 100%);
+  border: 1px solid rgba(18, 172, 204, 0.35);
   border-radius: var(--radius-xl);
   padding: 2.25rem;
-  box-shadow: 0 8px 30px rgba(18, 140, 201, 0.08);
+  box-shadow: 0 8px 30px rgba(18, 140, 201, 0.1);
 }
 
 @media (min-width: 768px) {
@@ -3756,13 +3762,13 @@ img, svg {
 }
 
 .solution-hub-card {
-  background: linear-gradient(150deg, #FFFFFF 0%, #F2F9FD 55%, #E5F3FC 100%);
-  border: 1px solid rgba(18, 172, 204, 0.22);
+  background: linear-gradient(145deg, #E2F1FC 0%, #EEF7FD 50%, #D8EDFA 100%);
+  border: 1px solid rgba(18, 172, 204, 0.32);
   border-radius: var(--radius-xl);
   padding: 2rem;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 4px 18px rgba(18, 140, 201, 0.07);
+  box-shadow: 0 4px 18px rgba(18, 140, 201, 0.08);
   position: relative;
   overflow: hidden;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
@@ -3867,11 +3873,11 @@ img, svg {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  background: linear-gradient(150deg, #FFFFFF 0%, #F5FAFD 50%, #EEF7FD 100%);
-  border: 1px solid rgba(18, 172, 204, 0.22);
+  background: linear-gradient(145deg, #E0F0FB 0%, #ECF6FD 50%, #D5E9F8 100%);
+  border: 1px solid rgba(18, 172, 204, 0.35);
   border-radius: var(--radius-xl);
   padding: 2rem;
-  box-shadow: 0 6px 24px rgba(18, 140, 201, 0.08);
+  box-shadow: 0 6px 24px rgba(18, 140, 201, 0.09);
 }
 
 @media (min-width: 768px) {
@@ -3908,11 +3914,11 @@ img, svg {
 }
 
 .module-card {
-  background: linear-gradient(150deg, #FFFFFF 0%, #F2F9FD 55%, #E5F3FC 100%);
-  border: 1px solid rgba(18, 172, 204, 0.22);
+  background: linear-gradient(145deg, #E2F1FC 0%, #EEF7FD 50%, #D8EDFA 100%);
+  border: 1px solid rgba(18, 172, 204, 0.32);
   border-radius: var(--radius-lg);
   padding: 1.75rem;
-  box-shadow: 0 4px 18px rgba(18, 140, 201, 0.07);
+  box-shadow: 0 4px 18px rgba(18, 140, 201, 0.08);
   transition: all 0.25s ease;
 }
 
@@ -3978,11 +3984,11 @@ img, svg {
 
 .workflow-step-card {
   flex: 1;
-  background: linear-gradient(150deg, #FFFFFF 0%, #F2F9FD 55%, #E5F3FC 100%);
-  border: 1px solid rgba(18, 172, 204, 0.22);
+  background: linear-gradient(145deg, #E2F1FC 0%, #EEF7FD 50%, #D8EDFA 100%);
+  border: 1px solid rgba(18, 172, 204, 0.32);
   border-radius: var(--radius-lg);
   padding: 1.5rem;
-  box-shadow: 0 4px 16px rgba(18, 140, 201, 0.07);
+  box-shadow: 0 4px 18px rgba(18, 140, 201, 0.08);
 }
 
 .workflow-step-h4 {
@@ -3999,11 +4005,11 @@ img, svg {
 }
 
 .demo-checklist-box {
-  background: linear-gradient(155deg, #FFFFFF 0%, #F4FAFD 50%, #EEF7FD 100%);
-  border: 1px solid rgba(18, 172, 204, 0.22);
+  background: linear-gradient(145deg, #E0F0FB 0%, #ECF6FD 45%, #D4E9F8 100%);
+  border: 1px solid rgba(18, 172, 204, 0.35);
   border-radius: var(--radius-xl);
   padding: 2.25rem;
-  box-shadow: 0 10px 32px rgba(18, 140, 201, 0.1);
+  box-shadow: 0 10px 32px rgba(18, 140, 201, 0.12);
   position: relative;
   overflow: hidden;
 }
@@ -4079,13 +4085,13 @@ img, svg {
 }
 
 .service-card {
-  background: linear-gradient(150deg, #FFFFFF 0%, #F2F9FD 55%, #E5F3FC 100%);
-  border: 1px solid rgba(18, 172, 204, 0.22);
+  background: linear-gradient(145deg, #E2F1FC 0%, #EEF7FD 50%, #D8EDFA 100%);
+  border: 1px solid rgba(18, 172, 204, 0.32);
   border-radius: var(--radius-lg);
   padding: 1.75rem;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 4px 18px rgba(18, 140, 201, 0.07);
+  box-shadow: 0 4px 18px rgba(18, 140, 201, 0.08);
   position: relative;
   overflow: hidden;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
@@ -4159,11 +4165,11 @@ img, svg {
 }
 
 .questions-advisory-card {
-  background: linear-gradient(150deg, #FFFFFF 0%, #F5FAFD 50%, #EEF7FD 100%);
-  border: 1px solid rgba(18, 172, 204, 0.22);
+  background: linear-gradient(145deg, #E0F0FB 0%, #ECF6FD 50%, #D4E9F8 100%);
+  border: 1px solid rgba(18, 172, 204, 0.35);
   border-radius: var(--radius-xl);
   padding: 2.25rem;
-  box-shadow: 0 8px 30px rgba(18, 140, 201, 0.08);
+  box-shadow: 0 8px 30px rgba(18, 140, 201, 0.1);
 }
 
 .questions-header {
@@ -4218,11 +4224,11 @@ img, svg {
 
 /* About Page */
 .about-purpose-card {
-  background: linear-gradient(150deg, #FFFFFF 0%, #F5FAFD 50%, #EEF7FD 100%);
-  border: 1px solid rgba(18, 172, 204, 0.22);
+  background: linear-gradient(145deg, #E0F0FB 0%, #ECF6FD 50%, #D4E9F8 100%);
+  border: 1px solid rgba(18, 172, 204, 0.35);
   border-radius: var(--radius-xl);
   padding: 2.5rem;
-  box-shadow: 0 8px 30px rgba(18, 140, 201, 0.08);
+  box-shadow: 0 8px 30px rgba(18, 140, 201, 0.1);
 }
 
 .about-prose {
@@ -4244,11 +4250,11 @@ img, svg {
 }
 
 .expectation-card {
-  background: linear-gradient(150deg, #FFFFFF 0%, #F2F9FD 55%, #E5F3FC 100%);
-  border: 1px solid rgba(18, 172, 204, 0.22);
+  background: linear-gradient(145deg, #E2F1FC 0%, #EEF7FD 50%, #D8EDFA 100%);
+  border: 1px solid rgba(18, 172, 204, 0.32);
   border-radius: var(--radius-lg);
   padding: 1.75rem;
-  box-shadow: 0 4px 18px rgba(18, 140, 201, 0.07);
+  box-shadow: 0 4px 18px rgba(18, 140, 201, 0.08);
   transition: all 0.25s ease;
 }
 
@@ -4287,11 +4293,11 @@ img, svg {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  background: linear-gradient(150deg, #FFFFFF 0%, #F5FAFD 50%, #EEF7FD 100%);
-  border: 1px solid rgba(18, 172, 204, 0.22);
+  background: linear-gradient(145deg, #E0F0FB 0%, #ECF6FD 50%, #D4E9F8 100%);
+  border: 1px solid rgba(18, 172, 204, 0.35);
   border-radius: var(--radius-xl);
   padding: 2.25rem;
-  box-shadow: 0 8px 30px rgba(18, 140, 201, 0.08);
+  box-shadow: 0 8px 30px rgba(18, 140, 201, 0.1);
 }
 
 @media (min-width: 768px) {
@@ -4350,11 +4356,11 @@ img, svg {
 }
 
 .contact-card {
-  background: linear-gradient(150deg, #FFFFFF 0%, #F5FAFD 50%, #EEF7FD 100%);
-  border: 1px solid rgba(18, 172, 204, 0.22);
+  background: linear-gradient(145deg, #E0F0FB 0%, #ECF6FD 50%, #D4E9F8 100%);
+  border: 1px solid rgba(18, 172, 204, 0.35);
   border-radius: var(--radius-xl);
   padding: 2.25rem;
-  box-shadow: 0 8px 30px rgba(18, 140, 201, 0.08);
+  box-shadow: 0 8px 30px rgba(18, 140, 201, 0.1);
   position: relative;
   overflow: hidden;
 }
