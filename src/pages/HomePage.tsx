@@ -170,7 +170,7 @@ export const HomePage: React.FC = () => {
               <div className="hero-cta-group">
                 <Link to="/request-demo" className="btn-primary btn-lg">
                   <span>Request a Demo</span>
-                  <ArrowRight size={18} />
+                  <ArrowRight size={18} className="shrink-0" />
                 </Link>
                 <Link to="/solutions" className="btn-secondary btn-lg">
                   <span>Explore Business Solutions</span>

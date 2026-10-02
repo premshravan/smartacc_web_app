@@ -103,6 +103,11 @@ export const IllustrativeBillingPreview: React.FC = () => {
           </div>
         </div>
 
+        {/* Mobile Swipe Hint */}
+        <div className="terminal-swipe-hint">
+          <span>← Swipe table horizontally to see all items & details →</span>
+        </div>
+
         {/* Bill Items Table */}
         <div className="terminal-table-wrap">
           {/* Animated laser scan line */}
