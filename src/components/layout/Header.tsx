@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { createPortal } from 'react-dom';
 import { NavLink, Link, useLocation } from 'react-router-dom';
 import { 
   ChevronDown, 
@@ -27,6 +28,18 @@ export const Header: React.FC = () => {
     setMobileMenuOpen(false);
     setSolutionsDropdownOpen(false);
   }, [location.pathname]);
+
+  // Lock body scroll when mobile drawer is open
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [mobileMenuOpen]);
 
   // Handle scroll shadow
   useEffect(() => {
@@ -170,7 +183,7 @@ export const Header: React.FC = () => {
           {/* Mobile Menu Hamburger */}
           <button
             type="button"
-            className="mobile-toggle-btn"
+            className={`mobile-toggle-btn ${mobileMenuOpen ? 'is-active' : ''}`}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label={mobileMenuOpen ? 'Close Navigation Menu' : 'Open Navigation Menu'}
             aria-expanded={mobileMenuOpen}
@@ -180,12 +193,12 @@ export const Header: React.FC = () => {
         </div>
       </div>
 
-      {/* Mobile Navigation Drawer */}
-      {mobileMenuOpen && (
+      {/* Mobile Navigation Drawer - rendered via portal to prevent backdrop-filter stacking trap */}
+      {mobileMenuOpen && typeof document !== 'undefined' && createPortal(
         <div className="mobile-drawer-backdrop" onClick={() => setMobileMenuOpen(false)}>
-          <div className="mobile-drawer" onClick={(e) => e.stopPropagation()}>
+          <div className="mobile-drawer" onClick={(e) => e.stopPropagation()} role="dialog" aria-modal="true" aria-label="Mobile Navigation">
             <div className="mobile-drawer-header">
-              <Link to="/" onClick={() => setMobileMenuOpen(false)}>
+              <Link to="/" onClick={() => setMobileMenuOpen(false)} aria-label="SmartAcc Home">
                 <img 
                   src={siteConfig.logoUrl} 
                   alt="SmartAcc Accounting Solutions" 
@@ -205,25 +218,46 @@ export const Header: React.FC = () => {
             <div className="mobile-drawer-body">
               <div className="mobile-nav-group">
                 <span className="mobile-group-title">Main Navigation</span>
-                <NavLink to="/" end className="mobile-nav-item">Home</NavLink>
-                <NavLink to="/features" className="mobile-nav-item">Features</NavLink>
-                <NavLink to="/solutions" end className="mobile-nav-item">Solutions Hub</NavLink>
-                <NavLink to="/services" className="mobile-nav-item">Services & Setup</NavLink>
-                <NavLink to="/about" className="mobile-nav-item">About SmartAcc</NavLink>
-                <NavLink to="/contact" className="mobile-nav-item">Contact Us</NavLink>
+                <NavLink to="/" end className="mobile-nav-item" onClick={() => setMobileMenuOpen(false)}>
+                  Home
+                </NavLink>
+                <NavLink to="/features" className="mobile-nav-item" onClick={() => setMobileMenuOpen(false)}>
+                  Features
+                </NavLink>
+                <NavLink to="/solutions" end className="mobile-nav-item" onClick={() => setMobileMenuOpen(false)}>
+                  Solutions Hub
+                </NavLink>
+                <NavLink to="/services" className="mobile-nav-item" onClick={() => setMobileMenuOpen(false)}>
+                  Services & Setup
+                </NavLink>
+                <NavLink to="/about" className="mobile-nav-item" onClick={() => setMobileMenuOpen(false)}>
+                  About SmartAcc
+                </NavLink>
+                <NavLink to="/contact" className="mobile-nav-item" onClick={() => setMobileMenuOpen(false)}>
+                  Contact Us
+                </NavLink>
               </div>
 
               <div className="mobile-nav-group">
                 <span className="mobile-group-title">Business Types</span>
                 {solutionsLinks.map((sol) => (
-                  <NavLink key={sol.path} to={sol.path} className="mobile-nav-subitem">
+                  <NavLink 
+                    key={sol.path} 
+                    to={sol.path} 
+                    className="mobile-nav-subitem"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
                     {sol.label}
                   </NavLink>
                 ))}
               </div>
 
               <div className="mobile-drawer-footer">
-                <Link to="/request-demo" className="btn-primary w-full text-center">
+                <Link 
+                  to="/request-demo" 
+                  className="btn-primary w-full text-center"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
                   Request a Demo
                 </Link>
                 <p className="mobile-location-note">
@@ -232,7 +266,8 @@ export const Header: React.FC = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </header>
   );
