@@ -12,10 +12,20 @@ import {
   ClipboardList,
   Sparkles
 } from 'lucide-react';
+import type { LucideIcon } from 'lucide-react';
 import { solutionsData } from '../content/solutions';
 import { Breadcrumbs } from '../components/common/Breadcrumbs';
 import { FaqAccordion } from '../components/common/FaqAccordion';
 import { CtaBanner } from '../components/common/CtaBanner';
+
+const iconMap: Record<string, LucideIcon> = {
+  ShoppingBag,
+  Truck,
+  Shirt,
+  Smartphone,
+  UtensilsCrossed,
+  Store,
+};
 
 export const SolutionDetailPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -25,19 +35,7 @@ export const SolutionDetailPage: React.FC = () => {
   }
 
   const solution = solutionsData[slug];
-
-  const getIcon = (name: string) => {
-    switch (name) {
-      case 'ShoppingBag': return ShoppingBag;
-      case 'Truck': return Truck;
-      case 'Shirt': return Shirt;
-      case 'Smartphone': return Smartphone;
-      case 'UtensilsCrossed': return UtensilsCrossed;
-      default: return Store;
-    }
-  };
-
-  const IconComp = getIcon(solution.iconName);
+  const IconComp = iconMap[solution.iconName] || Store;
   const demoUrlWithParam = `/request-demo?type=${solution.typeKey}`;
 
   const mappedFaqs = solution.faqs.map((f, i) => ({

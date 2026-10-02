@@ -19,6 +19,7 @@ import { siteConfig } from '../../config/site';
 export const Header: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [solutionsDropdownOpen, setSolutionsDropdownOpen] = useState(false);
+  const [mobileSolutionsOpen, setMobileSolutionsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
@@ -27,6 +28,7 @@ export const Header: React.FC = () => {
   useEffect(() => {
     setMobileMenuOpen(false);
     setSolutionsDropdownOpen(false);
+    setMobileSolutionsOpen(false);
   }, [location.pathname]);
 
   // Lock body scroll when mobile drawer is open
@@ -196,72 +198,173 @@ export const Header: React.FC = () => {
       {/* Mobile Navigation Drawer - rendered via portal to prevent backdrop-filter stacking trap */}
       {mobileMenuOpen && typeof document !== 'undefined' && createPortal(
         <div className="mobile-drawer-backdrop" onClick={() => setMobileMenuOpen(false)}>
-          <div className="mobile-drawer" onClick={(e) => e.stopPropagation()} role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+          <div 
+            className="mobile-drawer" 
+            onClick={(e) => e.stopPropagation()} 
+            role="dialog" 
+            aria-modal="true" 
+            aria-label="Mobile Navigation"
+          >
+            {/* Ambient motion graphic glow orbs matching home page */}
+            <div className="mobile-drawer-glow mobile-glow-orb-1" aria-hidden="true" />
+            <div className="mobile-drawer-glow mobile-glow-orb-2" aria-hidden="true" />
+
+            {/* Decorative flowing wave ribbon canvas matching home page */}
+            <div className="mobile-drawer-wave-canvas" aria-hidden="true">
+              <svg 
+                className="mobile-drawer-wave-svg" 
+                viewBox="0 0 400 240" 
+                fill="none" 
+                xmlns="http://www.w3.org/2000/svg" 
+                preserveAspectRatio="none"
+              >
+                <defs>
+                  <linearGradient id="mobWave1" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="#12C2CF" stopOpacity="0.28" />
+                    <stop offset="50%" stopColor="#287DDE" stopOpacity="0.20" />
+                    <stop offset="100%" stopColor="#4E8BF7" stopOpacity="0.10" />
+                  </linearGradient>
+                  <linearGradient id="mobWave2" x1="100%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stopColor="#084285" stopOpacity="0.35" />
+                    <stop offset="100%" stopColor="#12C2CF" stopOpacity="0.15" />
+                  </linearGradient>
+                </defs>
+                <path 
+                  d="M-20,120 C80,60 160,180 260,100 C320,50 370,120 420,80 L420,240 L-20,240 Z" 
+                  fill="url(#mobWave1)" 
+                />
+                <path 
+                  d="M-20,160 C90,120 180,200 280,140 C340,100 390,160 420,130 L420,240 L-20,240 Z" 
+                  fill="url(#mobWave2)" 
+                />
+              </svg>
+            </div>
+
+            {/* Mobile Drawer Header: Close button on left, logo on right (Right-aligned layout) */}
             <div className="mobile-drawer-header">
-              <Link to="/" onClick={() => setMobileMenuOpen(false)} aria-label="SmartAcc Home">
+              <button 
+                type="button" 
+                className="close-drawer-btn" 
+                onClick={() => setMobileMenuOpen(false)}
+                aria-label="Close navigation menu"
+              >
+                <X size={20} />
+              </button>
+
+              <Link 
+                to="/" 
+                onClick={() => setMobileMenuOpen(false)} 
+                aria-label="SmartAcc Home"
+                className="mobile-logo-capsule"
+              >
                 <img 
                   src={siteConfig.logoUrl} 
                   alt="SmartAcc Accounting Solutions" 
                   className="brand-logo-img-mobile" 
                 />
               </Link>
-              <button 
-                type="button" 
-                className="close-drawer-btn" 
-                onClick={() => setMobileMenuOpen(false)}
-                aria-label="Close menu"
-              >
-                <X size={20} />
-              </button>
             </div>
 
             <div className="mobile-drawer-body">
+              {/* Main Navigation Group - Right Aligned */}
               <div className="mobile-nav-group">
-                <span className="mobile-group-title">Main Navigation</span>
+                <div className="mobile-group-header">
+                  <span className="mobile-group-title">Main Navigation</span>
+                </div>
+
                 <NavLink to="/" end className="mobile-nav-item" onClick={() => setMobileMenuOpen(false)}>
-                  Home
+                  <span>Home</span>
                 </NavLink>
+
                 <NavLink to="/features" className="mobile-nav-item" onClick={() => setMobileMenuOpen(false)}>
-                  Features
+                  <span>Features</span>
                 </NavLink>
-                <NavLink to="/solutions" end className="mobile-nav-item" onClick={() => setMobileMenuOpen(false)}>
-                  Solutions Hub
-                </NavLink>
-                <NavLink to="/services" className="mobile-nav-item" onClick={() => setMobileMenuOpen(false)}>
-                  Services & Setup
-                </NavLink>
-                <NavLink to="/about" className="mobile-nav-item" onClick={() => setMobileMenuOpen(false)}>
-                  About SmartAcc
-                </NavLink>
-                <NavLink to="/contact" className="mobile-nav-item" onClick={() => setMobileMenuOpen(false)}>
-                  Contact Us
-                </NavLink>
-              </div>
 
-              <div className="mobile-nav-group">
-                <span className="mobile-group-title">Business Types</span>
-                {solutionsLinks.map((sol) => (
-                  <NavLink 
-                    key={sol.path} 
-                    to={sol.path} 
-                    className="mobile-nav-subitem"
-                    onClick={() => setMobileMenuOpen(false)}
+                {/* Business Types Collapsible Dropdown List */}
+                <div className="mobile-dropdown-container">
+                  <button
+                    type="button"
+                    className={`mobile-nav-item mobile-dropdown-trigger ${mobileSolutionsOpen ? 'is-expanded' : ''} ${location.pathname.startsWith('/solutions') ? 'is-active-parent' : ''}`}
+                    onClick={() => setMobileSolutionsOpen(!mobileSolutionsOpen)}
+                    aria-expanded={mobileSolutionsOpen}
+                    aria-label="Toggle Business Types Solutions Dropdown"
                   >
-                    {sol.label}
-                  </NavLink>
-                ))}
+                    <div className="mobile-dropdown-left">
+                      <ChevronDown 
+                        size={17} 
+                        className={`mobile-chevron ${mobileSolutionsOpen ? 'rotate-180' : ''}`} 
+                      />
+                      <span className="mobile-count-pill">6 Types</span>
+                    </div>
+                    <div className="mobile-dropdown-right">
+                      <span>Business Types</span>
+                    </div>
+                  </button>
+
+                  <div className={`mobile-dropdown-content ${mobileSolutionsOpen ? 'is-open' : ''}`}>
+                    <div className="mobile-dropdown-inner">
+                      {solutionsLinks.map((sol) => {
+                        const IconComp = sol.icon;
+                        return (
+                          <NavLink 
+                            key={sol.path} 
+                            to={sol.path} 
+                            className={({ isActive }) => `mobile-nav-subitem ${isActive ? 'active' : ''}`}
+                            onClick={() => setMobileMenuOpen(false)}
+                          >
+                            <span className="subitem-label">{sol.label}</span>
+                            <span className="subitem-icon-wrap">
+                              <IconComp size={15} />
+                            </span>
+                          </NavLink>
+                        );
+                      })}
+
+                      <NavLink
+                        to="/solutions"
+                        end
+                        className="mobile-solutions-hub-link"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        <span>View All Solutions Hub</span>
+                        <ArrowRight size={13} />
+                      </NavLink>
+                    </div>
+                  </div>
+                </div>
+
+                <NavLink to="/services" className="mobile-nav-item" onClick={() => setMobileMenuOpen(false)}>
+                  <span>Services & Setup</span>
+                </NavLink>
+
+                <NavLink to="/about" className="mobile-nav-item" onClick={() => setMobileMenuOpen(false)}>
+                  <span>About SmartAcc</span>
+                </NavLink>
+
+                <NavLink to="/contact" className="mobile-nav-item" onClick={() => setMobileMenuOpen(false)}>
+                  <span>Contact Us</span>
+                </NavLink>
               </div>
 
+              {/* Mobile Drawer Footer with Motion Graphic Pulse & CTA */}
               <div className="mobile-drawer-footer">
+                <div className="mobile-beacon-pill">
+                  <span className="beacon-dot" />
+                  <span className="beacon-text">Billing Software • Kerala</span>
+                </div>
+
                 <Link 
                   to="/request-demo" 
-                  className="btn-primary w-full text-center"
+                  className="btn-primary mobile-cta-btn"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  Request a Demo
+                  <span>Request a Demo</span>
+                  <ArrowRight size={16} />
                 </Link>
+
                 <p className="mobile-location-note">
-                  Thalassery, Kannur district, Kerala
+                  <MapPin size={13} className="inline-map-icon" />
+                  <span>Thalassery, Kannur district, Kerala</span>
                 </p>
               </div>
             </div>

@@ -48,7 +48,7 @@ export const DemoForm: React.FC<DemoFormProps> = ({ defaultBusinessType }) => {
     }
 
     // Phone validation (Indian 10-digit format or with +91)
-    const cleanPhone = formData.phone.replace(/[\s\-\(\)]/g, '');
+    const cleanPhone = formData.phone.replace(/[\s\-()]/g, '');
     const phoneRegex = /^(\+91|91|0)?[6-9]\d{9}$/;
     if (!formData.phone.trim()) {
       errs.phone = 'Please enter your mobile phone number.';

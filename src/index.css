@@ -862,10 +862,16 @@ img, svg {
 .mobile-drawer-backdrop {
   position: fixed;
   inset: 0;
-  background-color: rgba(15, 23, 42, 0.65);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
+  background-color: rgba(7, 24, 45, 0.72);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   z-index: 10000;
+  animation: fadeInBackdrop 0.25s ease-out;
+}
+
+@keyframes fadeInBackdrop {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 .mobile-drawer {
@@ -873,20 +879,21 @@ img, svg {
   top: 0;
   right: 0;
   bottom: 0;
-  width: 85%;
-  max-width: 360px;
-  background: linear-gradient(180deg, #FFFFFF 0%, #F1F9FE 55%, #E5F3FC 100%);
-  border-left: 1px solid rgba(18, 172, 204, 0.25);
-  box-shadow: -8px 0 35px rgba(18, 140, 201, 0.2);
+  width: 86%;
+  max-width: 370px;
+  /* Home Page Multi-Stop Rich Cyan-to-Deep-Blue Gradient */
+  background: linear-gradient(155deg, #07192D 0%, #0A2646 25%, #0E4473 55%, #106296 80%, #128CC9 100%);
+  border-left: 1px solid rgba(18, 194, 207, 0.4);
+  box-shadow: -14px 0 45px rgba(7, 24, 45, 0.65), -2px 0 16px rgba(18, 194, 207, 0.25);
   display: flex;
   flex-direction: column;
   z-index: 10001;
-  position: relative;
   overflow: hidden;
-  animation: drawerSlide 0.25s ease-out;
+  animation: drawerSlide 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  color: #FFFFFF;
 }
 
-/* Top luminous gradient beam on mobile drawer */
+/* Top luminous gradient beam on mobile drawer with shimmer motion */
 .mobile-drawer::before {
   content: '';
   position: absolute;
@@ -897,7 +904,60 @@ img, svg {
   background: linear-gradient(90deg, #12C2CF 0%, #128CC9 40%, #4E8BF7 75%, #12C2CF 100%);
   background-size: 200% 100%;
   animation: beamShimmer 3s linear infinite;
-  z-index: 5;
+  z-index: 10;
+}
+
+/* Ambient Floating Motion Graphic Glow Orbs inside drawer */
+.mobile-drawer-glow {
+  position: absolute;
+  pointer-events: none;
+  border-radius: 50%;
+  filter: blur(55px);
+  z-index: 1;
+  opacity: 0.55;
+}
+
+.mobile-glow-orb-1 {
+  width: 240px;
+  height: 240px;
+  background: radial-gradient(circle, rgba(18, 194, 207, 0.38) 0%, transparent 70%);
+  top: -30px;
+  right: -30px;
+  animation: floatOrb1 14s ease-in-out infinite alternate;
+}
+
+.mobile-glow-orb-2 {
+  width: 270px;
+  height: 270px;
+  background: radial-gradient(circle, rgba(78, 139, 247, 0.32) 0%, transparent 70%);
+  bottom: 20px;
+  left: -40px;
+  animation: floatOrb2 16s ease-in-out infinite alternate;
+}
+
+/* Flowing wave ribbon canvas matching home page */
+.mobile-drawer-wave-canvas {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 220px;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+  opacity: 0.85;
+}
+
+.mobile-drawer-wave-svg {
+  width: 100%;
+  height: 100%;
+  animation: mobileWaveMotion 10s ease-in-out infinite alternate;
+}
+
+@keyframes mobileWaveMotion {
+  0% { transform: translateY(0) scaleY(1); }
+  50% { transform: translateY(-7px) scaleY(1.04); }
+  100% { transform: translateY(4px) scaleY(0.97); }
 }
 
 @keyframes drawerSlide {
@@ -905,27 +965,49 @@ img, svg {
   to { transform: translateX(0); }
 }
 
+/* Mobile Drawer Header: Close Button on left, Logo on right (Right-aligned layout) */
 .mobile-drawer-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.25rem;
-  border-bottom: 1px solid var(--border-color);
-  background: linear-gradient(180deg, rgba(240, 248, 254, 0.8) 0%, rgba(227, 242, 252, 0.5) 100%);
+  padding: 1.15rem 1.25rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(7, 25, 45, 0.5);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  position: relative;
+  z-index: 5;
+}
+
+.mobile-logo-capsule {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.32rem 0.65rem;
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(18, 194, 207, 0.4);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.28);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.mobile-logo-capsule:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 20px rgba(18, 194, 207, 0.35);
 }
 
 .close-drawer-btn {
-  width: 40px;
-  height: 40px;
-  min-width: 40px;
-  min-height: 40px;
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+  min-height: 38px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: var(--radius-md);
-  background: linear-gradient(135deg, rgba(239, 68, 68, 0.1) 0%, rgba(220, 38, 38, 0.15) 100%);
-  border: 1px solid rgba(239, 68, 68, 0.3);
-  color: #DC2626;
+  background: rgba(239, 68, 68, 0.18);
+  border: 1px solid rgba(239, 68, 68, 0.45);
+  color: #FCA5A5;
   cursor: pointer;
   touch-action: manipulation;
   transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -935,92 +1017,329 @@ img, svg {
   background: linear-gradient(135deg, #EF4444 0%, #DC2626 100%);
   color: #FFFFFF;
   border-color: #DC2626;
-  transform: rotate(90deg) scale(1.05);
-  box-shadow: 0 4px 14px rgba(239, 68, 68, 0.35);
+  transform: rotate(90deg) scale(1.06);
+  box-shadow: 0 4px 14px rgba(239, 68, 68, 0.4);
 }
 
 .close-drawer-btn:active {
   transform: scale(0.92);
 }
 
+/* Mobile Drawer Body: All items right-aligned */
 .mobile-drawer-body {
-  padding: 1.25rem;
+  padding: 1.25rem 1.25rem 1.5rem;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.25rem;
+  position: relative;
+  z-index: 5;
 }
 
 .mobile-nav-group {
   display: flex;
   flex-direction: column;
-  gap: 0.35rem;
+  gap: 0.45rem;
+  width: 100%;
+}
+
+.mobile-group-header {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
 }
 
 .mobile-group-title {
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 700;
   text-transform: uppercase;
-  color: var(--text-subtle);
-  letter-spacing: 0.05em;
-  margin-bottom: 0.5rem;
+  color: #67E8F9;
+  letter-spacing: 0.08em;
+  text-align: right;
+  margin-bottom: 0.4rem;
+  text-shadow: 0 0 12px rgba(18, 194, 207, 0.4);
 }
 
+/* Mobile Nav Item - Right Aligned */
 .mobile-nav-item {
-  font-size: 1rem;
+  font-size: 0.98rem;
   font-weight: 600;
-  color: var(--heading-color);
-  padding: 0.75rem 0.85rem;
+  color: #F0F8FF;
+  padding: 0.75rem 1rem;
   min-height: 44px;
   display: flex;
   align-items: center;
+  justify-content: flex-end;
+  text-align: right;
   border-radius: var(--radius-md);
-  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  border-left: none;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
   touch-action: manipulation;
+  text-decoration: none;
 }
 
-.mobile-nav-item:hover, .mobile-nav-item.active {
-  color: var(--brand-primary);
-  background: linear-gradient(135deg, rgba(18, 194, 207, 0.12) 0%, rgba(78, 139, 247, 0.14) 100%);
-  border-left-color: #128CC9;
-  transform: translateX(4px);
+.mobile-nav-item:hover, 
+.mobile-nav-item.active {
+  color: #FFFFFF;
+  background: linear-gradient(270deg, rgba(18, 194, 207, 0.25) 0%, rgba(78, 139, 247, 0.14) 100%);
+  border-right-color: #12C2CF;
+  transform: translateX(-4px);
+  box-shadow: 0 4px 18px rgba(18, 140, 201, 0.2);
 }
 
+/* Business Types Accordion Dropdown */
+.mobile-dropdown-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.02);
+  transition: background 0.25s ease;
+}
+
+.mobile-dropdown-trigger {
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-right: 3px solid transparent;
+  border-left: none;
+}
+
+.mobile-dropdown-trigger.is-expanded,
+.mobile-dropdown-trigger.is-active-parent {
+  color: #FFFFFF;
+  background: linear-gradient(270deg, rgba(18, 194, 207, 0.22) 0%, rgba(78, 139, 247, 0.12) 100%);
+  border-right-color: #12C2CF;
+  box-shadow: 0 4px 16px rgba(18, 140, 201, 0.15);
+}
+
+.mobile-dropdown-left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.mobile-chevron {
+  color: #7DD3FC;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.mobile-chevron.rotate-180 {
+  transform: rotate(180deg);
+}
+
+.mobile-count-pill {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #67E8F9;
+  background: rgba(18, 194, 207, 0.2);
+  border: 1px solid rgba(18, 194, 207, 0.4);
+  padding: 0.15rem 0.5rem;
+  border-radius: 9999px;
+  letter-spacing: 0.02em;
+}
+
+.mobile-dropdown-right {
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: inherit;
+  text-align: right;
+}
+
+/* Accordion Smooth Expand/Collapse */
+.mobile-dropdown-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-dropdown-content.is-open {
+  grid-template-rows: 1fr;
+}
+
+.mobile-dropdown-inner {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 0.5rem 0 0.5rem 0;
+  margin-right: 0.4rem;
+  border-right: 2px dashed rgba(18, 194, 207, 0.35);
+  padding-right: 0.65rem;
+}
+
+/* Subitems - Right Aligned with Icon */
 .mobile-nav-subitem {
-  font-size: 0.875rem;
+  font-size: 0.88rem;
   font-weight: 500;
-  color: var(--text-main);
-  padding: 0.65rem 0.85rem;
+  color: #BAE6FD;
+  padding: 0.55rem 0.75rem;
   min-height: 40px;
   display: flex;
   align-items: center;
+  justify-content: flex-end;
+  gap: 0.65rem;
   border-radius: var(--radius-md);
-  border-left: 3px solid transparent;
-  transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+  border-right: 2px solid transparent;
+  border-left: none;
+  background: rgba(255, 255, 255, 0.03);
+  transition: all 0.22s ease;
   touch-action: manipulation;
+  text-decoration: none;
 }
 
-.mobile-nav-subitem:hover, .mobile-nav-subitem.active {
-  color: var(--brand-primary);
-  background: linear-gradient(135deg, rgba(18, 194, 207, 0.08) 0%, rgba(78, 139, 247, 0.1) 100%);
-  border-left-color: #12C2CF;
-  transform: translateX(4px);
+.subitem-label {
+  text-align: right;
+  flex: 1;
 }
 
+.subitem-icon-wrap {
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  background: rgba(18, 194, 207, 0.18);
+  border: 1px solid rgba(18, 194, 207, 0.35);
+  color: #38BDF8;
+  transition: all 0.22s ease;
+}
+
+.mobile-nav-subitem:hover, 
+.mobile-nav-subitem.active {
+  color: #FFFFFF;
+  background: rgba(18, 194, 207, 0.16);
+  border-right-color: #38BDF8;
+  transform: translateX(-4px);
+}
+
+.mobile-nav-subitem:hover .subitem-icon-wrap,
+.mobile-nav-subitem.active .subitem-icon-wrap {
+  background: #128CC9;
+  color: #FFFFFF;
+  border-color: #38BDF8;
+  transform: scale(1.08);
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.45);
+}
+
+.mobile-solutions-hub-link {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.45rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #67E8F9;
+  padding: 0.55rem 0.75rem;
+  border-radius: var(--radius-md);
+  background: rgba(18, 194, 207, 0.08);
+  border: 1px dashed rgba(18, 194, 207, 0.3);
+  transition: all 0.2s ease;
+  text-decoration: none;
+  margin-top: 0.25rem;
+}
+
+.mobile-solutions-hub-link:hover {
+  background: rgba(18, 194, 207, 0.2);
+  color: #FFFFFF;
+  transform: translateX(-3px);
+}
+
+/* Mobile Drawer Footer */
 .mobile-drawer-footer {
   margin-top: auto;
-  padding-top: 1rem;
-  border-top: 1px solid var(--border-color);
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.65rem;
+  width: 100%;
+}
+
+/* Kerala Live Signal Beacon Motion Graphic */
+.mobile-beacon-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.3rem 0.75rem;
+  background: rgba(18, 194, 207, 0.14);
+  border: 1px solid rgba(18, 194, 207, 0.35);
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #7DD3FC;
+  margin-bottom: 0.25rem;
+}
+
+.beacon-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #12C2CF;
+  box-shadow: 0 0 10px #12C2CF;
+  animation: pulseBeacon 2s infinite ease-in-out;
+}
+
+@keyframes pulseBeacon {
+  0% { transform: scale(0.9); opacity: 0.7; box-shadow: 0 0 0 0 rgba(18, 194, 207, 0.7); }
+  70% { transform: scale(1.18); opacity: 1; box-shadow: 0 0 0 8px rgba(18, 194, 207, 0); }
+  100% { transform: scale(0.9); opacity: 0.7; box-shadow: 0 0 0 0 rgba(18, 194, 207, 0); }
+}
+
+.mobile-cta-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.85rem 1.25rem;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 0.95rem;
+  background: linear-gradient(135deg, #12C2CF 0%, #128CC9 100%);
+  color: #FFFFFF;
+  text-decoration: none;
+  box-shadow: 0 6px 20px rgba(18, 140, 201, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.25s ease;
+}
+
+.mobile-cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(18, 194, 207, 0.5);
+}
+
+.mobile-cta-btn:active {
+  transform: translateY(0);
 }
 
 .mobile-location-note {
-  text-align: center;
-  font-size: 0.75rem;
-  color: var(--text-muted);
-  margin-top: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.4rem;
+  font-size: 0.76rem;
+  color: #94A3B8;
+  text-align: right;
+  width: 100%;
+  margin-top: 0.25rem;
+}
+
+.inline-map-icon {
+  color: #38BDF8;
 }
 
 /* ==========================================================================
