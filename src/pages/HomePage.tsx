@@ -14,7 +14,8 @@ import {
   Receipt,
   CreditCard,
   Building2,
-  Store
+  Store,
+  Cloud
 } from 'lucide-react';
 import { solutionsData } from '../content/solutions';
 import { generalFaqs } from '../content/faqs';
@@ -187,17 +188,19 @@ export const HomePage: React.FC = () => {
             {/* Right Visual Column — Illustrative POS Terminal with Floating Motion Badges */}
             <div className="hero-visual-col">
               {/* Floating interactive motion graphic badges */}
-              <div className="hero-floating-badge badge-float-1" title="High-Speed Counter Billing">
-                <span className="badge-pulse-dot" />
-                <span className="badge-text">⚡ Fast 1-Click Billing</span>
-              </div>
-              <div className="hero-floating-badge badge-float-2" title="GST Invoicing Ready">
-                <CheckCircle2 size={15} className="text-teal-300 shrink-0" />
-                <span className="badge-text">✓ 100% GST & Kerala Ready</span>
-              </div>
-              <div className="hero-floating-badge badge-float-3" title="Hybrid Cloud Architecture">
-                <span className="badge-mini-icon">🔒</span>
-                <span className="badge-text">Offline + Cloud Sync</span>
+              <div className="hero-floating-badges-wrap">
+                <div className="hero-floating-badge badge-float-3" title="Hybrid Cloud Architecture">
+                  <Cloud size={15} className="text-cyan-300 shrink-0" />
+                  <span className="badge-text">Offline + Cloud Sync</span>
+                </div>
+                <div className="hero-floating-badge badge-float-1" title="High-Speed Counter Billing">
+                  <span className="badge-pulse-dot" />
+                  <span className="badge-text">⚡ Fast 1-Click Billing</span>
+                </div>
+                <div className="hero-floating-badge badge-float-2" title="GST Invoicing Ready">
+                  <CheckCircle2 size={15} className="text-teal-300 shrink-0" />
+                  <span className="badge-text">✓ 100% GST & Kerala Ready</span>
+                </div>
               </div>
 
               <IllustrativeBillingPreview />

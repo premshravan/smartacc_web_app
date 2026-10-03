@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { MapPin, Phone, Mail, Clock, ArrowRight } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, ArrowRight, ExternalLink } from 'lucide-react';
 import { siteConfig, formatLocation } from '../config/site';
 import { ContactForm } from '../components/forms/ContactForm';
 import { Breadcrumbs } from '../components/common/Breadcrumbs';
@@ -39,7 +39,7 @@ export const ContactPage: React.FC = () => {
                     <div>
                       <div className="contact-item-label">Location:</div>
                       <div className="contact-item-value">{formatLocation()}</div>
-                      <div className="contact-item-note">Thalassery, Kannur District, Kerala</div>
+                      <div className="contact-item-note">Redmango Technologies, Orange Tower, AVK Nair Road, Thalassery</div>
                     </div>
                   </div>
 
@@ -95,21 +95,48 @@ export const ContactPage: React.FC = () => {
                 </div>
               </div>
 
-              {/* City Level Location Visual Card */}
+              {/* Embedded Google Map Card */}
               <div className="city-map-card mt-6">
                 <div className="city-map-header">
-                  <MapPin size={18} className="text-blue-600" />
-                  <span className="font-semibold text-slate-800 text-sm">General Town Location — Thalassery</span>
-                </div>
-                <div className="city-map-view">
-                  <div className="city-map-pin">
-                    <div className="pin-pulse"></div>
-                    <MapPin size={28} className="text-blue-700" />
+                  <div className="city-map-title-wrap">
+                    <MapPin size={18} className="text-blue-600 shrink-0" />
+                    <span className="font-semibold text-slate-800 text-sm">Office Location — Thalassery</span>
                   </div>
-                  <div className="city-map-label">Thalassery, Kannur, Kerala</div>
+                  {siteConfig.mapsUrl && (
+                    <a
+                      href={siteConfig.mapsUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="city-map-directions-link"
+                      title="Open full view on Google Maps"
+                    >
+                      <span>Directions</span>
+                      <ExternalLink size={12} />
+                    </a>
+                  )}
                 </div>
+
+                <div className="city-map-embed-wrap">
+                  <iframe
+                    src={siteConfig.mapEmbedUrl || "https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d3651.9384926817265!2d75.4941652!3d11.7473062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x3ba426518a6167a7%3A0x15caf734cde94569!2sRedmango%20Technologies%2C%20AVK%20Nair%20Road%2C%20Near%20Axis%20Bank%2C%202nd%20Floor%2C%20Orange%20Tower%2C%20Pilakool%2C%20Thalassery%2C%20Kerala%20670101!3m2!1d11.747306199999999!2d75.4941652!5e1!3m2!1sen!2sin!4v1790994010495!5m2!1sen!2sin"}
+                    width="100%"
+                    height="190"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    title="SmartAcc - Redmango Technologies Thalassery Map"
+                    className="city-map-iframe"
+                  />
+                </div>
+
+                <div className="city-map-address">
+                  <div className="font-semibold text-slate-800 text-xs">Redmango Technologies</div>
+                  <div className="text-xs text-slate-600">2nd Floor, Orange Tower, AVK Nair Road, Near Axis Bank, Pilakool, Thalassery, Kerala 670101</div>
+                </div>
+
                 <p className="city-map-caption">
-                  Map representation indicates our regional base in Thalassery. Specific office visit directions are coordinated directly with verified appointments.
+                  Visits and software demonstrations can be scheduled directly with our Thalassery team.
                 </p>
               </div>
             </div>
