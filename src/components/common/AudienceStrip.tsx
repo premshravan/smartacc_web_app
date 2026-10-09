@@ -7,6 +7,15 @@ import {
   Smartphone, 
   UtensilsCrossed, 
   Store,
+  Mountain,
+  Gem,
+  Wrench,
+  Hotel,
+  GraduationCap,
+  Car,
+  Briefcase,
+  Factory,
+  Zap,
   HelpCircle,
   ArrowRight
 } from 'lucide-react';
@@ -25,6 +34,15 @@ const audienceList: AudienceItem[] = [
   { name: 'Mobile Shops', sub: 'IMEI & accessories', path: '/solutions/mobile-shop-billing-software', icon: Smartphone },
   { name: 'Restaurants & Cafes', sub: 'Dine-in, takeaway, KOT', path: '/solutions/restaurant-billing-software', icon: UtensilsCrossed },
   { name: 'Supermarkets', sub: 'Rapid barcode checkout', path: '/solutions/supermarket-billing-software', icon: Store },
+  { name: 'Crusher', sub: 'Material sales & aggregate stock', path: '/solutions/crusher-billing-software', icon: Mountain },
+  { name: 'Jewellery', sub: 'Item creation & sales records', path: '/solutions/jewellery-billing-software', icon: Gem },
+  { name: 'Hardware', sub: 'Store billing & stock adjustments', path: '/solutions/hardware-billing-software', icon: Wrench },
+  { name: 'Lodge', sub: 'Billing & financial reporting', path: '/solutions/lodge-billing-software', icon: Hotel },
+  { name: 'School & College', sub: 'Administrative billing & ledgers', path: '/solutions/education-billing-software', icon: GraduationCap },
+  { name: 'Automobiles & Spare Parts', sub: 'Parts inventory & counter billing', path: '/solutions/automobile-spare-parts-billing-software', icon: Car },
+  { name: 'Service Sectors', sub: 'Service billing & expenses', path: '/solutions/service-sector-billing-software', icon: Briefcase },
+  { name: 'Manufacturing Units', sub: 'Material purchase & product sales', path: '/solutions/manufacturing-billing-software', icon: Factory },
+  { name: 'Electrical Shops', sub: 'Item billing & supplier records', path: '/solutions/electrical-shop-billing-software', icon: Zap },
 ];
 
 export const AudienceStrip: React.FC = () => {

@@ -16,7 +16,7 @@ export const AboutPage: React.FC = () => {
             Billing software with a business-focused approach, based in Thalassery.
           </p>
           <p className="page-intro mt-4">
-            SmartAcc is a billing software brand based in Thalassery, Kerala. It serves the billing requirements of different business types, including retail stores, wholesale businesses, clothing shops, mobile shops, and restaurants.
+            SmartAcc is a billing software brand based in Thalassery, Kerala. It serves the billing requirements of diverse business types, including retail stores, wholesale businesses, supermarkets, clothing shops, hardware stores, automobile & spare parts, crushers, jewellery, lodges, institutions, and service sectors.
           </p>
         </div>
       </section>

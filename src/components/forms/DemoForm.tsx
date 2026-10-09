@@ -31,7 +31,11 @@ export const DemoForm: React.FC<DemoFormProps> = ({ defaultBusinessType }) => {
 
   // Preselect business type based on URL param
   useEffect(() => {
-    const validTypes = ['retail', 'wholesale', 'textile', 'mobile', 'restaurant', 'supermarket', 'other'];
+    const validTypes = [
+      'retail', 'wholesale', 'textile', 'mobile', 'restaurant', 'supermarket',
+      'crusher', 'jewellery', 'hardware', 'lodge', 'education', 'automobiles',
+      'service', 'manufacturing', 'electrical', 'other'
+    ];
     const lowerQuery = queryType.toLowerCase();
     if (validTypes.includes(lowerQuery)) {
       setFormData(prev => ({ ...prev, businessType: lowerQuery }));
@@ -288,6 +292,15 @@ export const DemoForm: React.FC<DemoFormProps> = ({ defaultBusinessType }) => {
             <option value="mobile">Mobile & Electronics Shop</option>
             <option value="restaurant">Restaurant, Cafe & Food</option>
             <option value="supermarket">Supermarket & Grocery</option>
+            <option value="crusher">Crusher & Aggregates</option>
+            <option value="jewellery">Jewellery Business</option>
+            <option value="hardware">Hardware Store</option>
+            <option value="lodge">Lodge & Accommodation</option>
+            <option value="education">School & College</option>
+            <option value="automobiles">Automobiles & Spare Parts</option>
+            <option value="service">Service Sector</option>
+            <option value="manufacturing">Manufacturing Unit</option>
+            <option value="electrical">Electrical Shop</option>
             <option value="other">Other Business Type</option>
           </select>
           {errors.businessType && <p className="error-text">{errors.businessType}</p>}

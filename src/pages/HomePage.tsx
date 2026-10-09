@@ -334,10 +334,15 @@ export const HomePage: React.FC = () => {
                 <p className="feature-card-desc text-slate-700">
                   Tell us how you bill today. A demo is the right place to review your workflow and discuss available options.
                 </p>
-                <Link to="/features" className="btn-primary btn-sm mt-3">
-                  <span>Explore Features</span>
-                  <ArrowRight size={14} />
-                </Link>
+                <div className="flex flex-wrap gap-2 mt-3">
+                  <Link to="/features" className="btn-primary btn-sm">
+                    <span>Explore Features</span>
+                    <ArrowRight size={14} />
+                  </Link>
+                  <Link to="/features#compare-versions" className="btn-secondary btn-sm">
+                    <span>Compare Versions</span>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

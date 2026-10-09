@@ -7,6 +7,15 @@ import {
   Smartphone, 
   UtensilsCrossed, 
   Store,
+  Mountain,
+  Gem,
+  Wrench,
+  Hotel,
+  GraduationCap,
+  Car,
+  Briefcase,
+  Factory,
+  Zap,
   ArrowRight,
   HelpCircle,
   CheckCircle2
@@ -25,6 +34,15 @@ export const SolutionsHubPage: React.FC = () => {
       case 'Shirt': return Shirt;
       case 'Smartphone': return Smartphone;
       case 'UtensilsCrossed': return UtensilsCrossed;
+      case 'Mountain': return Mountain;
+      case 'Gem': return Gem;
+      case 'Wrench': return Wrench;
+      case 'Hotel': return Hotel;
+      case 'GraduationCap': return GraduationCap;
+      case 'Car': return Car;
+      case 'Briefcase': return Briefcase;
+      case 'Factory': return Factory;
+      case 'Zap': return Zap;
       default: return Store;
     }
   };
@@ -104,7 +122,7 @@ export const SolutionsHubPage: React.FC = () => {
 
       <CtaBanner 
         title="Ready to discuss your store's setup?"
-        subtitle="Book a walkthrough tailored specifically to your checkout environment, whether retail, wholesale, food, or electronics."
+        subtitle="Book a walkthrough tailored specifically to your business environment across our 15 industry workflows."
       />
     </div>
   );

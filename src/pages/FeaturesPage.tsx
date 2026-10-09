@@ -19,6 +19,7 @@ import { generalFaqs } from '../content/faqs';
 import { FaqAccordion } from '../components/common/FaqAccordion';
 import { CtaBanner } from '../components/common/CtaBanner';
 import { Breadcrumbs } from '../components/common/Breadcrumbs';
+import { VersionComparisonSection } from '../components/common/VersionComparisonSection';
 
 export const FeaturesPage: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState<'all' | 'billing' | 'inventory_records' | 'visibility_operations'>('all');
@@ -46,6 +47,9 @@ export const FeaturesPage: React.FC = () => {
               <span>See These Features in a Demo</span>
               <ArrowRight size={16} />
             </Link>
+            <a href="#compare-versions" className="btn-secondary">
+              <span>Compare Software Versions</span>
+            </a>
             <Link to="/solutions" className="btn-secondary">
               <span>View Industry Solutions</span>
             </Link>
@@ -217,6 +221,9 @@ export const FeaturesPage: React.FC = () => {
           </div>
         </div>
       </section>
+
+      {/* Compare SmartAcc Versions Section */}
+      <VersionComparisonSection />
 
       {/* FAQs */}
       <section className="section bg-slate-subtle">

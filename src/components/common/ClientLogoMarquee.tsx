@@ -206,8 +206,8 @@ export const ClientLogoMarquee: React.FC = () => {
                     className="client-marquee-img"
                     loading="lazy"
                     draggable={false}
-                    width={140}
-                    height={52}
+                    width={160}
+                    height={68}
                   />
                 </div>
               ))}
@@ -226,8 +226,8 @@ export const ClientLogoMarquee: React.FC = () => {
                     className="client-marquee-img"
                     loading="lazy"
                     draggable={false}
-                    width={140}
-                    height={52}
+                    width={160}
+                    height={68}
                   />
                 </div>
               ))}
@@ -246,8 +246,8 @@ export const ClientLogoMarquee: React.FC = () => {
                     className="client-marquee-img"
                     loading="lazy"
                     draggable={false}
-                    width={140}
-                    height={52}
+                    width={160}
+                    height={68}
                   />
                 </div>
               ))}
@@ -266,8 +266,8 @@ export const ClientLogoMarquee: React.FC = () => {
                     className="client-marquee-img"
                     loading="lazy"
                     draggable={false}
-                    width={140}
-                    height={52}
+                    width={160}
+                    height={68}
                   />
                 </div>
               ))}

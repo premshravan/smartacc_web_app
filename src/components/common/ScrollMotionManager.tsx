@@ -34,7 +34,10 @@ export const ScrollMotionManager: React.FC = () => {
       '.preview-callout-card',
       '.cta-banner-card',
       '.feature-detail-card',
-      '.hardware-advisory-card'
+      '.hardware-advisory-card',
+      '.version-card',
+      '.comparison-table-wrapper',
+      '.version-cta-card'
     ];
 
     const elements = document.querySelectorAll<HTMLElement>(selectors.join(', '));

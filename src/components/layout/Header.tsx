@@ -11,6 +11,15 @@ import {
   Smartphone, 
   UtensilsCrossed, 
   Store,
+  Mountain,
+  Gem,
+  Wrench,
+  Hotel,
+  GraduationCap,
+  Car,
+  Briefcase,
+  Factory,
+  Zap,
   MapPin,
   ArrowRight
 } from 'lucide-react';
@@ -81,6 +90,15 @@ export const Header: React.FC = () => {
     { label: 'Mobile & Electronics', path: '/solutions/mobile-shop-billing-software', icon: Smartphone, desc: 'IMEI/serial records & accessories' },
     { label: 'Restaurants & Cafes', path: '/solutions/restaurant-billing-software', icon: UtensilsCrossed, desc: 'Dine-in, takeaway, KOT & counter orders' },
     { label: 'Supermarkets & Grocery', path: '/solutions/supermarket-billing-software', icon: Store, desc: 'Fast continuous scanning & loose produce' },
+    { label: 'Crusher', path: '/solutions/crusher-billing-software', icon: Mountain, desc: 'Material sales, stock & outstanding balances' },
+    { label: 'Jewellery', path: '/solutions/jewellery-billing-software', icon: Gem, desc: 'Item records, sales, purchases & profit' },
+    { label: 'Hardware Stores', path: '/solutions/hardware-billing-software', icon: Wrench, desc: 'Multi-item inventory, transfers & suppliers' },
+    { label: 'Lodges', path: '/solutions/lodge-billing-software', icon: Hotel, desc: 'Billing, customer records & financial entries' },
+    { label: 'Schools & Colleges', path: '/solutions/education-billing-software', icon: GraduationCap, desc: 'Administrative billing & receipt tracking' },
+    { label: 'Automobiles & Spare Parts', path: '/solutions/automobile-spare-parts-billing-software', icon: Car, desc: 'Parts stock, returns & counter sales' },
+    { label: 'Service Sectors', path: '/solutions/service-sector-billing-software', icon: Briefcase, desc: 'Service billing, expenses & accounts' },
+    { label: 'Manufacturing Units', path: '/solutions/manufacturing-billing-software', icon: Factory, desc: 'Material purchases & product sales' },
+    { label: 'Electrical Shops', path: '/solutions/electrical-shop-billing-software', icon: Zap, desc: 'Electrical supplies, stock & purchases' },
   ];
 
   return (
@@ -276,8 +294,12 @@ export const Header: React.FC = () => {
                   <span>Home</span>
                 </NavLink>
 
-                <NavLink to="/features" className="mobile-nav-item" onClick={() => setMobileMenuOpen(false)}>
+                <NavLink to="/features" end className="mobile-nav-item" onClick={() => setMobileMenuOpen(false)}>
                   <span>Features</span>
+                </NavLink>
+
+                <NavLink to="/features#compare-versions" className="mobile-nav-item" onClick={() => setMobileMenuOpen(false)}>
+                  <span>Compare Versions</span>
                 </NavLink>
 
                 {/* Business Types Collapsible Dropdown List */}
@@ -294,7 +316,7 @@ export const Header: React.FC = () => {
                         size={17} 
                         className={`mobile-chevron ${mobileSolutionsOpen ? 'rotate-180' : ''}`} 
                       />
-                      <span className="mobile-count-pill">6 Types</span>
+                      <span className="mobile-count-pill">15 Types</span>
                     </div>
                     <div className="mobile-dropdown-right">
                       <span>Business Types</span>

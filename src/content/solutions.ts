@@ -489,6 +489,636 @@ export const solutionsData: Record<string, SolutionData> = {
     ],
     demoCtaText: 'Request a Supermarket Demo',
   },
+  'crusher-billing-software': {
+    slug: 'crusher-billing-software',
+    typeKey: 'crusher',
+    metaTitle: 'Crusher Business Billing Software — SmartAcc',
+    metaDescription: 'Billing and inventory software for crusher and aggregate businesses in Kerala. Material sales, stock movement, purchases, and ledger reports.',
+    shortLabel: 'Crusher',
+    h1: 'SmartAcc for Crusher Businesses',
+    tagline: 'Material sales, purchases, stock movement, and business reporting.',
+    cardCopy: 'Manage everyday billing, material sales, purchases, stock movement, and business reporting for crusher and aggregate businesses.',
+    intro: 'Manage everyday billing, material sales, purchases, stock movement, and business reporting for crusher and aggregate businesses.',
+    iconName: 'Mountain',
+    businessChallenges: [
+      {
+        title: 'Material Sales & Purchase Records',
+        description: 'Record aggregate dispatches, truckload quantities, customer billings, and raw material vendor purchases with precision.',
+      },
+      {
+        title: 'Inventory & Stock Adjustments',
+        description: 'Track aggregate stock movements across yards, manage material stockpiles, and record inventory adjustments as crushing operations progress.',
+      },
+      {
+        title: 'Customer & Supplier Management',
+        description: 'Maintain structured customer directories for civil contractors, builders, and suppliers with complete transaction ledgers.',
+      },
+      {
+        title: 'Outstanding Balance & Ageing Tracking',
+        description: 'Monitor customer credit balances, manage supplier dues, and review ageing statements to maintain steady working capital.',
+      },
+    ],
+    candidateModules: [
+      {
+        title: 'Material Sales Invoicing & Billing',
+        description: 'Generate commercial invoices and delivery receipts for aggregate dispatches with tax calculation.',
+      },
+      {
+        title: 'Purchase & Supplier Records',
+        description: 'Log procurement bills, handle supplier purchases, and maintain accurate purchase return registers.',
+      },
+      {
+        title: 'Stock Adjustment & Stock Transfer',
+        description: 'Record periodic stock adjustments and track material transfers between site depots or operational yards.',
+      },
+      {
+        title: 'Inventory & Outstanding Reports',
+        description: 'Generate real-time inventory reports, sales summaries, gross profit figures, and customer outstanding ageing statements.',
+      },
+    ],
+    workflowSteps: [
+      { step: 1, title: 'Dispatch Entry', detail: 'Select aggregate grade, delivery information, and customer contractor account.' },
+      { step: 2, title: 'Bill Calculation', detail: 'Compute line totals, apply GST rates, and update customer credit balances.' },
+      { step: 3, title: 'Invoice & Stock Update', detail: 'Print formal dispatch invoice and update site inventory levels.' },
+    ],
+    demoDiscussionPoints: [
+      'Aggregate material catalog and rate tier setup',
+      'Daily dispatch bill formats and printer compatibility',
+      'Contractor credit ledgers and outstanding balance tracking',
+      'Stock adjustments and depot transfer routines',
+    ],
+    faqs: [
+      {
+        question: 'Can SmartAcc track customer outstanding balances for contractors?',
+        answer: 'Yes. SmartAcc generates Customer Outstanding Reports, Customer/Supplier Ageing Reports, and transaction ledgers so you can monitor pending dues accurately.',
+      },
+      {
+        question: 'Which SmartAcc version is suitable for crusher operations?',
+        answer: 'The Base Version covers material sales, purchases, inventory, and customer ledgers. If you require receipt/payment vouchers, journal entries, and balance sheet accounting, the Full Version is recommended.',
+      },
+    ],
+    demoCtaText: 'Request a Crusher Demo',
+  },
+  'jewellery-billing-software': {
+    slug: 'jewellery-billing-software',
+    typeKey: 'jewellery',
+    metaTitle: 'Jewellery Business Billing Software — SmartAcc',
+    metaDescription: 'Billing and inventory software for jewellery businesses. Item creation, sales, purchases, customer records, and profit reporting.',
+    shortLabel: 'Jewellery',
+    h1: 'SmartAcc for Jewellery Businesses',
+    tagline: 'Streamlined item records, counter billing, and business reporting.',
+    cardCopy: 'Organize jewellery business billing, item records, purchases, sales, customer information, and reporting through one streamlined system.',
+    intro: 'Organize jewellery business billing, item records, purchases, sales, customer information, and reporting through one streamlined system.',
+    iconName: 'Gem',
+    businessChallenges: [
+      {
+        title: 'Item Record Creation',
+        description: 'Maintain distinct piece codes, product categories, descriptions, and counter prices in an orderly catalog.',
+      },
+      {
+        title: 'Sales & Purchase Transactions',
+        description: 'Process customer billing, customer sales returns, and vendor purchases with transparent documentation.',
+      },
+      {
+        title: 'Customer Directory & Transaction History',
+        description: 'Maintain reliable customer contact profiles, previous transaction records, and running ledger accounts.',
+      },
+      {
+        title: 'Gross Profit & Outstanding Reports',
+        description: 'Review trading margins through Gross Profit Reports and track pending customer credit balances.',
+      },
+    ],
+    candidateModules: [
+      {
+        title: 'Jewellery Item Master Creation',
+        description: 'Create organized product catalogs, customer accounts, supplier details, and staff entries.',
+      },
+      {
+        title: 'Sales & Return Entries',
+        description: 'Prepare customer invoices, record sales returns, and log supplier purchase returns seamlessly.',
+      },
+      {
+        title: 'Stock Adjustment & Inventory Reports',
+        description: 'Maintain inventory visibility with real-time stock logs and comprehensive inventory reports.',
+      },
+      {
+        title: 'Financial & Ledger Reports',
+        description: 'Generate customer outstanding reports, supplier ageing summaries, and gross profit analytics.',
+      },
+    ],
+    workflowSteps: [
+      { step: 1, title: 'Item Selection', detail: 'Select piece or item code from catalog with description and rate.' },
+      { step: 2, title: 'Customer Billing', detail: 'Attach customer details, compute invoice value with taxes, and tender payment.' },
+      { step: 3, title: 'Receipt & Ledger Update', detail: 'Print tax invoice and update sales registers and outstanding ledgers.' },
+    ],
+    demoDiscussionPoints: [
+      'Product catalog structure and item naming conventions',
+      'Counter invoice formatting and printer hardware options',
+      'Customer directory and outstanding payment tracking',
+      'Daily register reconciliations and gross profit review',
+    ],
+    faqs: [
+      {
+        question: 'Can I track customer purchases and dues in SmartAcc?',
+        answer: 'Yes. Customer creation, outstanding tracking, and ageing reports allow you to keep precise records of regular buyers and balances.',
+      },
+      {
+        question: 'What printing formats are supported for jewellery invoices?',
+        answer: 'SmartAcc supports compact thermal receipts as well as formal A4/A5 laser prints with full tax invoice breakdowns.',
+      },
+    ],
+    demoCtaText: 'Request a Jewellery Demo',
+  },
+  'hardware-billing-software': {
+    slug: 'hardware-billing-software',
+    typeKey: 'hardware',
+    metaTitle: 'Hardware Store Billing Software — SmartAcc',
+    metaDescription: 'Billing software for hardware and sanitary stores in Kerala. Item management, supplier purchases, stock adjustments, and sales records.',
+    shortLabel: 'Hardware',
+    h1: 'SmartAcc for Hardware Stores',
+    tagline: 'Extensive product billing, supplier purchases, and stock adjustments.',
+    cardCopy: 'Simplify hardware store billing and manage a wide range of products, supplier purchases, stock adjustments, and sales records.',
+    intro: 'Simplify hardware store billing and manage a wide range of products, supplier purchases, stock adjustments, and sales records.',
+    iconName: 'Wrench',
+    businessChallenges: [
+      {
+        title: 'Broad Product Catalog',
+        description: 'Fast product retrieval across thousands of screws, tools, paints, plumbing, and sanitary fittings at the counter.',
+      },
+      {
+        title: 'Supplier Purchases & Vendor Accounts',
+        description: 'Manage incoming shipments from multiple manufacturers and monitor supplier outstanding payments and credit terms.',
+      },
+      {
+        title: 'Stock Adjustment & Stock Transfers',
+        description: 'Account for loose goods, damaged items, and multi-godown stock movements through orderly stock transfers.',
+      },
+      {
+        title: 'Contractor Credit Billing',
+        description: 'Maintain ongoing credit accounts for local plumbers, electricians, and civil builders.',
+      },
+    ],
+    candidateModules: [
+      {
+        title: 'Item Master & Barcode Retrieval',
+        description: 'Find items instantly by short code, size, brand, or barcode scanner at the billing desk.',
+      },
+      {
+        title: 'Purchase & Supplier Management',
+        description: 'Log supplier purchase bills, record purchase returns, and track supplier outstanding payments.',
+      },
+      {
+        title: 'Stock Adjustments & Transfers',
+        description: 'Perform stock reconciliations and transfer items between godowns and retail storefronts.',
+      },
+      {
+        title: 'Outstanding & Ageing Statements',
+        description: 'Track builder credit, review customer outstanding reports, and analyze payment ageing.',
+      },
+    ],
+    workflowSteps: [
+      { step: 1, title: 'Item Lookup', detail: 'Type product initials or scan barcode to retrieve hardware size and price.' },
+      { step: 2, title: 'Bill Preparation', detail: 'Adjust quantities, assign contractor account if credit sale, and apply taxes.' },
+      { step: 3, title: 'Checkout & Stock Update', detail: 'Print receipt and deduct inventory quantities automatically.' },
+    ],
+    demoDiscussionPoints: [
+      'Managing diverse product catalogs and classification',
+      'Barcode scanner and thermal receipt printer connectivity',
+      'Contractor credit ledgers and payment receipts',
+      'Purchase recording and supplier return handling',
+    ],
+    faqs: [
+      {
+        question: 'Can SmartAcc handle thousands of hardware items?',
+        answer: 'Yes. The item creation master and optimized search support extensive product lists with quick keyword and barcode lookup.',
+      },
+      {
+        question: 'Does SmartAcc track contractor credit balances?',
+        answer: 'Yes. Customer outstanding reports and ageing analysis keep contractor credit accounts fully visible.',
+      },
+    ],
+    demoCtaText: 'Request a Hardware Demo',
+  },
+  'lodge-billing-software': {
+    slug: 'lodge-billing-software',
+    typeKey: 'lodge',
+    metaTitle: 'Lodge & Accommodation Billing Software — SmartAcc',
+    metaDescription: 'Billing and record management software for lodges and guest houses. Customer records, sales billing, expense purchases, and accounting reports.',
+    shortLabel: 'Lodge',
+    h1: 'SmartAcc for Lodges',
+    tagline: 'Customer billing, purchase tracking, and financial reporting.',
+    cardCopy: 'Support billing, customer records, purchases, and financial reporting for lodge businesses.',
+    intro: 'Support billing, customer records, purchases, and financial reporting for lodge businesses.',
+    iconName: 'Hotel',
+    businessChallenges: [
+      {
+        title: 'Customer & Guest Records',
+        description: 'Record customer names, contact numbers, and billing history accurately at check-in and checkout.',
+      },
+      {
+        title: 'Sales & Billing Entries',
+        description: 'Prepare clean bills for lodging and associated services with clear GST tax breakdowns.',
+      },
+      {
+        title: 'Operational Purchases & Expenses',
+        description: 'Record maintenance purchases, laundry, housekeeping supplies, and vendor payments.',
+      },
+      {
+        title: 'Financial & Accounting Clarity',
+        description: 'Track daily cash and digital receipts, vendor payments, and overall accounting registers.',
+      },
+    ],
+    candidateModules: [
+      {
+        title: 'Customer Directory & Profiles',
+        description: 'Maintain organized customer records, transaction histories, and contact information.',
+      },
+      {
+        title: 'Sales & Billing Invoicing',
+        description: 'Generate formal invoices with supported payment mode recording (Cash, UPI, Card).',
+      },
+      {
+        title: 'Purchase & Supplier Ledgers',
+        description: 'Log supplier bills for lodge amenities and monitor outstanding vendor payments.',
+      },
+      {
+        title: 'Receipt & Accounting Reports (Full Version)',
+        description: 'Record receipt and payment entries, journal vouchers, and complete business accounting reports.',
+      },
+    ],
+    workflowSteps: [
+      { step: 1, title: 'Bill Creation', detail: 'Enter customer details, accommodation billing items, and applicable tariff.' },
+      { step: 2, title: 'Payment Tender', detail: 'Record payment mode (Cash, UPI, Card) or note company billing dues.' },
+      { step: 3, title: 'Receipt & Register', detail: 'Print guest receipt and update daily billing register.' },
+    ],
+    demoDiscussionPoints: [
+      'Customer invoice formatting and tax breakdown preferences',
+      'Daily counter collection recording and UPI reconciliations',
+      'Supplier purchase tracking for lodge maintenance',
+      'Accounting reports and shift-wise collection tallies',
+    ],
+    faqs: [
+      {
+        question: 'Can I issue GST-compliant bills for guests?',
+        answer: 'Yes. SmartAcc formats tax invoices with GST rates, HSN/SAC codes, and customer details.',
+      },
+      {
+        question: 'Which version supports advance receipts and payments?',
+        answer: 'The Full Version includes dedicated Receipt Entry, Payment Entry, Bank Entry, and Journal Entry modules.',
+      },
+    ],
+    demoCtaText: 'Request a Lodge Demo',
+  },
+  'education-billing-software': {
+    slug: 'education-billing-software',
+    typeKey: 'education',
+    metaTitle: 'School & College Administrative Billing Software — SmartAcc',
+    metaDescription: 'Billing and account software for educational institutions. Administrative transactions, customer records, receipts, and financial reporting.',
+    shortLabel: 'School & College',
+    h1: 'SmartAcc for Schools & Colleges',
+    tagline: 'Administrative billing, account records, and financial reporting.',
+    cardCopy: 'Support administrative billing, customer/account records, receipt management, and financial reporting for educational institutions.',
+    intro: 'Support administrative billing, customer/account records, receipt management, and financial reporting for educational institutions.',
+    iconName: 'GraduationCap',
+    businessChallenges: [
+      {
+        title: 'Administrative Invoicing & Billing',
+        description: 'Issue administrative billing entries, institutional sales, and materials distribution records.',
+      },
+      {
+        title: 'Account & Beneficiary Records',
+        description: 'Maintain structured customer, student account, and vendor profiles with clear contact records.',
+      },
+      {
+        title: 'Receipt & Payment Management',
+        description: 'Track institutional collections, operational expenses, and supplier purchase settlements.',
+      },
+      {
+        title: 'Institutional Financial Reporting',
+        description: 'Review outstanding balances, supplier dues, cash register totals, and formal accounting reports.',
+      },
+    ],
+    candidateModules: [
+      {
+        title: 'Billing & Transaction Records',
+        description: 'Generate administrative bills, uniform/book sales, and official transaction receipts.',
+      },
+      {
+        title: 'Customer & Account Management',
+        description: 'Maintain organized student accounts and vendor contact ledgers.',
+      },
+      {
+        title: 'Receipt & Payment Entries (Full Version)',
+        description: 'Log incoming receipt entries, supplier payouts, and institutional bank entry records.',
+      },
+      {
+        title: 'Outstanding & Accounting Reports',
+        description: 'Generate outstanding reports, supplier ageing statements, and institutional balance reports.',
+      },
+    ],
+    workflowSteps: [
+      { step: 1, title: 'Record Entry', detail: 'Select student/account record and administrative billing item.' },
+      { step: 2, title: 'Payment Tender', detail: 'Record tender mode (Bank Transfer, UPI, Cheque, Cash).' },
+      { step: 3, title: 'Statement & Voucher', detail: 'Print official voucher or receipt and post to institutional ledger.' },
+    ],
+    demoDiscussionPoints: [
+      'Administrative billing workflows and voucher layouts',
+      'Vendor purchase recording for books, stationery, and institutional supplies',
+      'Receipt and payment management with the Full Version',
+      'Auditing and accounting report generation',
+    ],
+    faqs: [
+      {
+        question: 'Can SmartAcc record receipts and payments for an institution?',
+        answer: 'Yes. With SmartAcc Full Version, you get Receipt Entry, Payment Entry, Bank Entry, and Journal vouchers.',
+      },
+      {
+        question: 'Does SmartAcc support printing formal receipts?',
+        answer: 'Yes. Invoices and receipts can be printed on standard A4/A5 letterheads or compact slip printers.',
+      },
+    ],
+    demoCtaText: 'Request an Education Demo',
+  },
+  'automobile-spare-parts-billing-software': {
+    slug: 'automobile-spare-parts-billing-software',
+    typeKey: 'automobiles',
+    metaTitle: 'Automobile & Spare Parts Billing Software — SmartAcc',
+    metaDescription: 'Inventory and billing software for automobile spare parts businesses. Part numbers, sales, purchases, stock transfers, and profit reports.',
+    shortLabel: 'Automobiles & Spare Parts',
+    h1: 'SmartAcc for Automobile & Spare Parts Businesses',
+    tagline: 'Spare parts inventory, counter billing, and stock transfers.',
+    cardCopy: 'Manage spare parts inventory, customer billing, supplier purchases, stock transfers, and business reporting more efficiently.',
+    intro: 'Manage spare parts inventory, customer billing, supplier purchases, stock transfers, and business reporting more efficiently.',
+    iconName: 'Car',
+    businessChallenges: [
+      {
+        title: 'Spare Parts Item Creation',
+        description: 'Organize extensive inventories with specific part numbers, brands, vehicle models, and rack locations.',
+      },
+      {
+        title: 'Stock Movement & Godown Transfers',
+        description: 'Keep stock counts accurate across counter racks, secondary godowns, and workshop stores through stock transfers.',
+      },
+      {
+        title: 'Customer & Workshop Billing',
+        description: 'Bill retail motorists and commercial workshop mechanics with speed and transparent pricing.',
+      },
+      {
+        title: 'Sales & Purchase Returns',
+        description: 'Handle customer exchanges and distributor warranty returns systematically.',
+      },
+    ],
+    candidateModules: [
+      {
+        title: 'Spare Parts Item Master',
+        description: 'Create part masters with codes, manufacturers, categories, and unit pricing.',
+      },
+      {
+        title: 'Counter Billing & Barcode Lookup',
+        description: 'Fast counter sales with barcode scanning and instant keyword part retrieval.',
+      },
+      {
+        title: 'Stock Adjustment & Stock Transfer',
+        description: 'Transfer stock between godowns and log periodic physical inventory reconciliations.',
+      },
+      {
+        title: 'Inventory & Gross Profit Reports',
+        description: 'Review stock on hand, identify top-moving items, and examine gross profit margins.',
+      },
+    ],
+    workflowSteps: [
+      { step: 1, title: 'Part Code Lookup', detail: 'Type part code or description to retrieve stock availability and price.' },
+      { step: 2, title: 'Invoice Preparation', detail: 'Add customer/mechanic name, apply trade discount, and calculate tax.' },
+      { step: 3, title: 'Billing & Stock Deduction', detail: 'Print invoice and update real-time spare parts stock.' },
+    ],
+    demoDiscussionPoints: [
+      'Part catalog size and code search workflows',
+      'Stock transfers between shop counters and secondary warehouses',
+      'Workshop credit accounts and payment tracking',
+      'Purchase order entry and supplier invoice reconciliation',
+    ],
+    faqs: [
+      {
+        question: 'Can I search items by part number or code?',
+        answer: 'Yes. SmartAcc provides instant keyword and code search across product masters.',
+      },
+      {
+        question: 'Does SmartAcc track supplier purchases and returns for auto parts?',
+        answer: 'Yes. Both purchase recording and purchase return entries are built into both Base and Full versions.',
+      },
+    ],
+    demoCtaText: 'Request an Auto Parts Demo',
+  },
+  'service-sector-billing-software': {
+    slug: 'service-sector-billing-software',
+    typeKey: 'service',
+    metaTitle: 'Service Sector Billing & Accounting Software — SmartAcc',
+    metaDescription: 'Billing and client accounting software for service sector businesses. Service invoicing, client ledgers, expenses, and business reporting.',
+    shortLabel: 'Service Sectors',
+    h1: 'SmartAcc for Service Businesses',
+    tagline: 'Service invoicing, customer accounts, and financial reporting.',
+    cardCopy: 'Manage service-related billing, customer records, business expenses through supported entries, and financial reporting from one place.',
+    intro: 'Manage service-related billing, customer records, business expenses through supported entries, and financial reporting from one place.',
+    iconName: 'Briefcase',
+    businessChallenges: [
+      {
+        title: 'Service Billing Workflows',
+        description: 'Prepare professional invoices for consulting, repair, maintenance, or client services with clear line descriptions.',
+      },
+      {
+        title: 'Customer Directory & Profiles',
+        description: 'Maintain organized client directories, service notes, contact profiles, and transaction records.',
+      },
+      {
+        title: 'Outstanding Balance Tracking',
+        description: 'Keep track of pending client balances with Customer Outstanding and Ageing Reports.',
+      },
+      {
+        title: 'Operational Expense Entries',
+        description: 'Record business expenses, vendor bills, and operational payouts with complete financial clarity.',
+      },
+    ],
+    candidateModules: [
+      {
+        title: 'Service Invoicing & Sales',
+        description: 'Generate and print detailed tax invoices with service descriptions, terms, and tax calculation.',
+      },
+      {
+        title: 'Customer Master & Ledgers',
+        description: 'Organize client directories and view comprehensive ledger account statements.',
+      },
+      {
+        title: 'Receipt & Payment Entries (Full Version)',
+        description: 'Log client payments received, supplier settlements, and bank reconciliations.',
+      },
+      {
+        title: 'Account Creation & Journal Vouchers (Full Version)',
+        description: 'Maintain custom chart of accounts, journal entries, and formal accounting reports.',
+      },
+    ],
+    workflowSteps: [
+      { step: 1, title: 'Service Invoicing', detail: 'Select service line, enter project/service description, and assign client.' },
+      { step: 2, title: 'Tax & Term Calculation', detail: 'Apply appropriate GST rate and terms of payment.' },
+      { step: 3, title: 'Dispatch & Ledger Update', detail: 'Print invoice and reflect dues in client ledger.' },
+    ],
+    demoDiscussionPoints: [
+      'Custom invoice layout for professional service bills',
+      'Client credit management and outstanding statements',
+      'Expense management and bank vouchers in Full Version',
+      'Profit and loss visibility',
+    ],
+    faqs: [
+      {
+        question: 'Can I generate tax invoices for non-inventory services?',
+        answer: 'Yes. SmartAcc supports service item creation with proper SAC codes and GST rate configurations.',
+      },
+      {
+        question: 'Which version is best for service firms tracking overheads?',
+        answer: 'The Full Version is ideal, as it includes Account Creation, Bank Entry, Receipt/Payment vouchers, and Journal Entries.',
+      },
+    ],
+    demoCtaText: 'Request a Service Sector Demo',
+  },
+  'manufacturing-billing-software': {
+    slug: 'manufacturing-billing-software',
+    typeKey: 'manufacturing',
+    metaTitle: 'Manufacturing Unit Billing & Inventory Software — SmartAcc',
+    metaDescription: 'Billing and inventory software for small and medium manufacturing units. Material purchases, product sales, stock movement, and reporting.',
+    shortLabel: 'Manufacturing Units',
+    h1: 'SmartAcc for Manufacturing Businesses',
+    tagline: 'Material purchases, product sales, stock movement, and reporting.',
+    cardCopy: 'Manage material purchases, product sales, stock movement, supplier records, and business reporting for manufacturing operations.',
+    intro: 'Manage material purchases, product sales, stock movement, supplier records, and business reporting for manufacturing operations.',
+    iconName: 'Factory',
+    businessChallenges: [
+      {
+        title: 'Raw Material & Product Records',
+        description: 'Maintain item records for incoming raw materials, consumables, and finished commercial goods.',
+      },
+      {
+        title: 'Purchase & Sales Invoicing',
+        description: 'Record vendor procurement invoices, purchase returns, and B2B wholesale product sales dispatches.',
+      },
+      {
+        title: 'Stock Movement & Yard Transfers',
+        description: 'Track material transfers between godowns, production units, and final dispatch warehouses.',
+      },
+      {
+        title: 'Supplier & Customer Ledgers',
+        description: 'Maintain running balances for raw material vendors and commercial wholesale distributors.',
+      },
+    ],
+    candidateModules: [
+      {
+        title: 'Item Master (Materials & Finished Goods)',
+        description: 'Configure item records with codes, units of measurement, and pricing structures.',
+      },
+      {
+        title: 'Purchase & Sales Transactions',
+        description: 'Log procurement bills, customer commercial invoices, and associated return entries.',
+      },
+      {
+        title: 'Stock Adjustment & Transfer',
+        description: 'Track stock transfers between units and log periodic physical inventory reconciliations.',
+      },
+      {
+        title: 'Inventory & Gross Profit Reports',
+        description: 'Review stock valuations, gross profit reports, and accounting statements (Full Version).',
+      },
+    ],
+    workflowSteps: [
+      { step: 1, title: 'Procurement Entry', detail: 'Log raw material purchase from supplier and update inventory.' },
+      { step: 2, title: 'Finished Goods Dispatch', detail: 'Prepare wholesale invoice with transporter/buyer details.' },
+      { step: 3, title: 'Accounting Posting', detail: 'Update inventory records and post to customer credit ledger.' },
+    ],
+    demoDiscussionPoints: [
+      'Item master setup for raw materials vs finished goods',
+      'Commercial B2B invoice formatting with GST details',
+      'Stock adjustments and internal warehouse transfers',
+      'Supplier outstanding and commercial customer ageing',
+    ],
+    faqs: [
+      {
+        question: 'Can I track both raw materials and finished goods in inventory?',
+        answer: 'Yes. SmartAcc item creation supports distinct item codes and descriptions for materials and finished products.',
+      },
+      {
+        question: 'Does SmartAcc provide gross profit and inventory valuation reports?',
+        answer: 'Yes. Gross Profit Reports and Inventory Reports provide clear visibility over trading margins and stock levels.',
+      },
+    ],
+    demoCtaText: 'Request a Manufacturing Demo',
+  },
+  'electrical-shop-billing-software': {
+    slug: 'electrical-shop-billing-software',
+    typeKey: 'electrical',
+    metaTitle: 'Electrical Shop Billing Software — SmartAcc',
+    metaDescription: 'Billing and inventory software for electrical shops in Kerala. Product sales, purchases, stock adjustments, and contractor ledgers.',
+    shortLabel: 'Electrical Shops',
+    h1: 'SmartAcc for Electrical Shops',
+    tagline: 'Electrical product billing, inventory management, and supplier records.',
+    cardCopy: 'Streamline electrical product billing, inventory management, purchases, supplier records, and customer transactions.',
+    intro: 'Streamline electrical product billing, inventory management, purchases, supplier records, and customer transactions.',
+    iconName: 'Zap',
+    businessChallenges: [
+      {
+        title: 'Extensive Electrical Product Master',
+        description: 'Fast item lookup across switches, wires, conduits, lighting fixtures, and electrical appliances.',
+      },
+      {
+        title: 'Product Sales & Purchases',
+        description: 'Execute rapid counter billing and record incoming shipments from major electrical distributors.',
+      },
+      {
+        title: 'Stock Adjustment & Stock Transfers',
+        description: 'Manage wire roll adjustments, broken items, and store-to-godown stock transfers.',
+      },
+      {
+        title: 'Electrician & Contractor Credit',
+        description: 'Maintain ongoing credit accounts and track dues for local electricians and electrical contractors.',
+      },
+    ],
+    candidateModules: [
+      {
+        title: 'Electrical Item Master & Barcodes',
+        description: 'Maintain products by brand, model, wattage, roll length, or barcode scanner entry.',
+      },
+      {
+        title: 'High-Speed Counter Sales',
+        description: 'Fast customer checkout with instant product search and flexible payment mode recording.',
+      },
+      {
+        title: 'Stock Adjustment & Transfer',
+        description: 'Log inventory reconciliations and transfer items between godowns and retail storefronts.',
+      },
+      {
+        title: 'Customer Outstanding & Ageing Reports',
+        description: 'Track contractor credit balances, review outstanding reports, and print account statements.',
+      },
+    ],
+    workflowSteps: [
+      { step: 1, title: 'Scan or Search Item', detail: 'Scan barcode or search by brand/model to populate the bill.' },
+      { step: 2, title: 'Customer & Contractor Pricing', detail: 'Select contractor ledger or counter retail price, apply taxes.' },
+      { step: 3, title: 'Tender & Print', detail: 'Record payment mode (UPI, Cash, Credit) and print receipt.' },
+    ],
+    demoDiscussionPoints: [
+      'Setting up wire rolls, bundle pricing, and item barcodes',
+      'Contractor credit ledgers and running balance tracking',
+      'Supplier purchase tracking and invoice reconciliation',
+      'Daily sales summaries and inventory reports',
+    ],
+    faqs: [
+      {
+        question: 'Can I scan barcodes on branded electrical items?',
+        answer: 'Yes. SmartAcc works with standard USB and wireless barcode scanners to retrieve products instantly.',
+      },
+      {
+        question: 'Does SmartAcc support electrician credit accounts?',
+        answer: 'Yes. Customer creation and Customer Outstanding Reports allow you to track credit balances easily.',
+      },
+    ],
+    demoCtaText: 'Request an Electrical Shop Demo',
+  },
 };
 
 export const allSolutionsList = Object.values(solutionsData);

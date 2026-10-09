@@ -90,7 +90,9 @@ export const Footer: React.FC = () => {
             <li><Link to="/solutions/mobile-shop-billing-software">Mobile & Electronics Shops</Link></li>
             <li><Link to="/solutions/restaurant-billing-software">Restaurants & Cafes</Link></li>
             <li><Link to="/solutions/supermarket-billing-software">Supermarkets & Grocery</Link></li>
-            <li><Link to="/solutions">All Business Categories</Link></li>
+            <li><Link to="/solutions/hardware-billing-software">Hardware Stores</Link></li>
+            <li><Link to="/solutions/automobile-spare-parts-billing-software">Automobiles & Spare Parts</Link></li>
+            <li><Link to="/solutions" style={{ color: '#38BDF8', fontWeight: 600 }}>View All 15 Categories &rarr;</Link></li>
           </ul>
         </div>
 
@@ -100,6 +102,7 @@ export const Footer: React.FC = () => {
           <ul className="footer-links-list">
             <li><Link to="/">Home</Link></li>
             <li><Link to="/features">Billing Features</Link></li>
+            <li><Link to="/features#compare-versions">Compare Software Versions</Link></li>
             <li><Link to="/services">Setup & Support Options</Link></li>
             <li><Link to="/about">About SmartAcc</Link></li>
             <li><Link to="/contact">Contact SmartAcc</Link></li>
